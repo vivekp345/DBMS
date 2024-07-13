@@ -1,0 +1,41 @@
+
+create table branch (
+    branch varchar(10), 
+    strength number(5),
+    foreign key(branch) references student(bname)
+);
+
+insert into branch values('cse',240);
+insert into branch values('it',240);
+insert into branch values('csbs',240);
+insert into branch values('ece',240);
+select * from branch;
+ 
+create table student (
+    rollno number(10), 
+    name varchar(20), 
+    age number(5) not null, 
+    bname varchar(5), 
+    per number(5,2), 
+    email varchar(30), 
+    primary key(rollno)
+);
+
+
+insert into student values(110,'vivek',18,'cse',85,'23pa1a05i5@vishnun.edu.in');
+insert into student values(111,'puneeth',19,'cse',76,'23pa1a05i6@vishnun.edu.in');
+insert into student values(112,'lokesh',18,'cse',85,'23pa1a05i8@vishnun.edu.in');
+insert into student values(113,'hemanth',18,'cse',85,'23pa1a05g4@vishnun.edu.in');
+insert into student values(114,'nuta50',18,'cse',85,'23pa1a05h5@vishnun.edu.in');
+insert into student values(115,'sarath',18,'cse',85,'23pa1a05d9@vishnun.edu.in');
+
+
+select * from student;
+
+alter table student add gender varchar(10);
+select * from student;
+alter table student drop column gender;
+select * from student;
+
+
+select *from tab;
